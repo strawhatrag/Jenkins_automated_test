@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 09 04:31:32 UTC 2021</td>
+<td>Started on:</td><td>Fri Nov 12 05:05:45 UTC 2021</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2840 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (274 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.LoginTest.ExcelTest()'><b>ExcelTest</b><br>Test class: test.LoginTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at test.LoginTest.ExcelTest(LoginTest.java:50)
+<td title='test.GridTest.LaunchBrowser()'><b>LaunchBrowser</b><br>Test class: test.GridTest</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ip-172-31-83-34&apos;, ip: &apos;172.31.83.34&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-1113-aws&apos;, java.version: &apos;1.8.0_265&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at test.GridTest.LaunchBrowser(GridTest.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,9 +110,51 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace172699023", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace172699023'><pre>java.lang.NullPointerException
-	at test.LoginTest.ExcelTest(LoginTest.java:50)
+Caused by: java.net.ConnectException: Failed to connect to /172.17.0.1:4444
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	... 29 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	... 51 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace658909832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace658909832'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ip-172-31-83-34&apos;, ip: &apos;172.31.83.34&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-1113-aws&apos;, java.version: &apos;1.8.0_265&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at test.GridTest.LaunchBrowser(GridTest.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -131,9 +180,44 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Failed to connect to /172.17.0.1:4444
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	... 29 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	... 51 more
 </pre></div></td>
 <td>0</td>
-<td>test.LoginTest@28ac3dc3</td></tr>
+<td>test.GridTest@b7dd107</td></tr>
 </table><p>
 </body>
 </html>

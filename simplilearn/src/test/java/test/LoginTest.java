@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -25,6 +26,7 @@ public class LoginTest extends Baseclass {
 		login.Login(UserNameVal,PasswordVal);
 		login.ErrorCheck();
 		report.endTest(test);
+		Assert.assertTrue(false);
 		
 	}
 	
